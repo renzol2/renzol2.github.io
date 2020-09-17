@@ -1,16 +1,21 @@
 import { Flex, Heading } from '@chakra-ui/core';
+import { motion } from 'framer-motion';
+
+const MotionHeading = motion.custom(Heading);
 
 export default function Home() {
   return (
     <Flex justifyContent="center">
-      <Heading
+      <MotionHeading
         fontWeight="400"
         fontSize={['20px', '100px']}
         color="white"
-        py="300px"
+        my="300px"
+        whileHover={{ scale: 1.07 }}
+        whileTap={{ scale: 0.95 }}
       >
         👋, 🌎! My name is <b>Renzo.</b>
-      </Heading>
+      </MotionHeading>
     </Flex>
   );
 }
