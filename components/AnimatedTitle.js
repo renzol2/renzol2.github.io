@@ -8,7 +8,6 @@ export default function AnimatedTitle() {
     <MotionHeading
       fontWeight="normal"
       fontSize={['30px', '50px', '90px']}
-      fontFamily="sans-serif"
       color="white"
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
@@ -32,12 +31,11 @@ export default function AnimatedTitle() {
       <FadingComponent delay={0.75}>
         <Text
           fontSize={['15px', '20px', '30px']}
-          fontFamily="sans-serif"
           fontWeight="light"
           color="whitesmoke"
           pt={3}
         >
-          I'm a CS💻 + Music🎼 student @ UIUC who likes building websites and
+          I'm a CS💻 + Music🎼 student @ UIUC. 🧡Building websites and
           making music!
         </Text>
       </FadingComponent>
