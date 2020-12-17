@@ -1,7 +1,7 @@
-import { Heading, Text } from '@chakra-ui/react';
+import { Heading, Text, chakra } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import FadingComponent from './FadingComponent';
-const MotionHeading = motion.custom(Heading);
+const MotionHeading = chakra(motion.custom(Heading));
 
 export default function AnimatedTitle() {
   return (
@@ -9,22 +9,16 @@ export default function AnimatedTitle() {
       fontWeight="400"
       fontSize={['30px', '50px', '90px']}
       color="white"
-      whileHover={{ scale: 1.04 }}
-      whileTap={{ scale: 0.95 }}
-      drag="x"
-      dragMomentum={true}
-      dragConstraints={{ left: 0, right: 0 }}
-      textShadow="2px 8px black"
-      textAlign="center"
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+      textAlign={['center', 'left']}
     >
       {/* Name */}
       <FadingComponent hiddenScale={0.5} delay={0.5}>
-        <Text>
-          👋, 🌎! <br /> I'm <b>Renzo Ledesma</b>
-          {/* Pronouns */}
-          <Text textShadow="none" fontSize={['10px', '20px', '30px']}>
-            (he/him)
-          </Text>
+        👋, 🌎! <br /> i'm <b>renzo ledesma</b>
+        {/* Pronouns */}
+        <Text textShadow="none" fontSize={['10px', '20px', '30px']} fontStyle="italic">
+          (he/him)
         </Text>
       </FadingComponent>
 
@@ -32,12 +26,10 @@ export default function AnimatedTitle() {
       <FadingComponent delay={0.75}>
         <Text
           fontSize={['15px', '20px', '30px']}
-          textAlign="center"
-          color={'lightgrey'}
-          textShadow="1px 3px black"
+          color="whitesmoke"
           pt={3}
         >
-          I'm a CS💻 + Music🎼 student @ Illinois who likes building websites
+          i'm a cs💻 + music🎼 student @ uiuc who likes building websites
           and making music!
         </Text>
       </FadingComponent>

@@ -3,7 +3,7 @@ import { Flex, Text, Box, Heading, Link } from '@chakra-ui/react';
 function NavBar() {
   return (
     <div>
-      <Flex px={2} color="white" alignItems="center">
+      <Flex px={4} pt={2} color="white" alignItems="center">
         <Heading size="md" p={2} fontWeight="bold">
           RL
         </Heading>
