@@ -1,16 +1,16 @@
-import { Flex, Text, Box } from '@chakra-ui/core';
+import { Flex, Text, Box, Heading, Link } from '@chakra-ui/react';
 
 function NavBar() {
   return (
     <div>
       <Flex px={2} color="white" alignItems="center">
-        <Text p={2} fontWeight="bold">
-          Renzo
-        </Text>
+        <Heading size="md" p={2} fontWeight="bold">
+          RL
+        </Heading>
         <Box mx="auto" />
-        {['About', 'Projects', 'GitHub'].map((nav) => (
-          <Text key={nav} mx="2">{nav}</Text>
-        ))}
+        <Link href="https://github.com/renzol2" isExternal p={2}>
+          GitHub
+        </Link>
       </Flex>
     </div>
   );

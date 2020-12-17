@@ -1,4 +1,7 @@
 import { motion } from 'framer-motion';
+import { Box, chakra } from '@chakra-ui/react';
+
+const MotionBox = chakra(motion.div);
 
 export default function FadingComponent({
   children,
@@ -7,7 +10,7 @@ export default function FadingComponent({
   delay = 0.4,
 }) {
   return (
-    <motion.div
+    <MotionBox
       initial="hidden"
       animate="visible"
       variants={{
@@ -25,6 +28,6 @@ export default function FadingComponent({
       }}
     >
       {children}
-    </motion.div>
+    </MotionBox>
   );
 }
