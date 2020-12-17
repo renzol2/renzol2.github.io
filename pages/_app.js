@@ -3,7 +3,7 @@ import '../styles/globals.css';
 
 function App({ Component, pageProps }) {
   return (
-    <ChakraProvider>
+    <ChakraProvider resetCSS>
       <Component {...pageProps} />
     </ChakraProvider>
   );
