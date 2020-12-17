@@ -6,6 +6,7 @@ import {
   ListItem,
   Text,
   UnorderedList,
+  Heading,
 } from '@chakra-ui/layout';
 import { Image } from '@chakra-ui/react';
 import AnimatedTitle from '../components/AnimatedTitle';
@@ -14,7 +15,7 @@ import NavBar from '../components/NavBar';
 
 export default function Home() {
   return (
-    <Box w="100%" backgroundColor="#9B4F96">
+    <Box w="100%" backgroundColor="#9B4F96" color="white">
       {/* Color bar */}
       <Flex py={1} backgroundColor="#0038A8" />
 
@@ -39,7 +40,7 @@ export default function Home() {
           </Center>
         </FadingComponent>
         <Center>
-          <Box color="white" fontSize={['xl', '3xl']} fontWeight="light" px={5}>
+          <Box fontSize={['lg', '3xl']} fontWeight="light" px={5}>
             <Text>
               Hi! I'm <b>Renzo</b>, a sophomore at UIUC studying Computer
               Science + Music. I enjoy creating things, specifically websites,
@@ -48,7 +49,7 @@ export default function Home() {
             </Text>
             <Grid
               templateColumns="60% 40%"
-              fontSize={['xl', '2xl']}
+              fontSize={['md', '2xl']}
               px={2}
               py={2}
             >
@@ -66,6 +67,10 @@ export default function Home() {
           </Box>
         </Center>
       </Grid>
+      <Center h={['50vh', '90vh']} px={['10%', 0]}>
+        <Heading textAlign="center">More coming soon. Check back in a few hours!</Heading>
+      </Center>
+      <Flex py={1} backgroundColor="#D60270" />
     </Box>
   );
 }
