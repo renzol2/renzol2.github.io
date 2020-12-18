@@ -6,6 +6,7 @@ import {
   ListItem,
   UnorderedList,
   Text,
+  AspectRatio,
 } from '@chakra-ui/react';
 import FadingComponent from './FadingComponent';
 import LandingHeader from './LandingHeader';
@@ -16,20 +17,21 @@ export default function About() {
       <Grid px={['5%', '15%']} templateColumns={['100%', '35% 65%']}>
         <FadingComponent>
           <Center pb={5}>
-            <Image
-              alt="Renzo Ledesma"
-              src="images/profile_pic.jpg"
-              boxSize={[150, 350]}
-              borderRadius={[100, 50]}
-            />
+              <Image
+                alt="Renzo Ledesma"
+                src="images/profile_pic.jpg"
+                boxSize={[150, 350]}
+                borderRadius={[100, 50]}
+                objectFit="cover"
+              />
           </Center>
         </FadingComponent>
         <Center>
-          <Box fontSize={['lg', '3xl']} fontWeight="light" px={5}>
+          <Box fontSize={['lg', '2xl']} fontWeight="light" px={5}>
             <Text>
               Hi! I'm <b>Renzo</b>, a sophomore at UIUC studying Computer Science
-              + Music. I enjoy creating things, specifically websites, apps, and
-              music. Here are some technologies I've been working with recently:
+              and Music. I enjoy creating things, specifically websites, apps, and
+              music. Here are some technologies and things I've been enjoying recently:
             </Text>
             <Grid
               templateColumns="60% 40%"
