@@ -7,7 +7,7 @@ export default function AnimatedTitle() {
   return (
     <MotionHeading
       fontWeight="normal"
-      fontSize={['30px', '50px', '90px']}
+      fontSize={['30px', '50px', '80px', '90px']}
       color="white"
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
