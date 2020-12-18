@@ -27,7 +27,7 @@ export default function Experience() {
   const isMobile = useBreakpointValue({ base: true, md: false });
   const [experience, setExperience] = useState(experiences[0]);
   return (
-    <Box w="100%">
+    <Box w="100%" pb="10vh">
       {/* Header */}
       <Center w="100%" h="100px">
         <LandingHeader>Experience</LandingHeader>

@@ -14,6 +14,7 @@ import AnimatedTitle from '../components/AnimatedTitle';
 import Experience from '../components/Experience';
 import FadingComponent from '../components/FadingComponent';
 import NavBar from '../components/NavBar';
+import Work from '../components/Work';
 
 export default function Home() {
   return (
@@ -36,6 +37,7 @@ export default function Home() {
       <Experience />
 
       {/* Work */}
+      <Work />
 
       {/* Contact */}
 
