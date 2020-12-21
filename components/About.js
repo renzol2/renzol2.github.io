@@ -13,7 +13,7 @@ import LandingHeader from './LandingHeader';
 
 export default function About() {
   return (
-    <Center w="100%" h="90vh">
+    <Center w="100%" minH="400px" h="90vh">
       <Grid px={['5%', '15%']} templateColumns={['100%', '35% 65%']}>
         <FadingComponent>
           <Center pb={5}>

@@ -1,10 +1,7 @@
-import { Box, Center, VStack, Text, Heading, Link } from '@chakra-ui/react';
+import { Box, Center, VStack } from '@chakra-ui/react';
 import LandingHeader from './LandingHeader';
 import work from '../constants/work';
 import ProjectCard from './ProjectCard';
-import TikTok from './TikTok';
-import ReactPlayer from 'react-player';
-import CardComponent from './CardComponent';
 import VideoCard from './VideoCard';
 
 export default function Work() {

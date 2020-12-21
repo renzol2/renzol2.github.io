@@ -62,7 +62,6 @@ export default function Experience() {
                   backgroundColor: colors.MAGENTA_LIGHT,
                 }}
                 onClick={() => {
-                  console.log(isMobile);
                   setExperience(exp);
                 }}
               >

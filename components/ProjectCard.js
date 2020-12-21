@@ -1,13 +1,11 @@
 import {
   Box,
-  Divider,
   Grid,
   Heading,
   Image,
   Link,
   Text,
 } from '@chakra-ui/react';
-import colors from '../styles/colors';
 import CardComponent from './CardComponent';
 
 export default function ProjectCard({ project }) {

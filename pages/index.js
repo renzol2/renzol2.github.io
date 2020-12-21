@@ -26,7 +26,7 @@ export default function Home() {
       <NavBar />
 
       {/* Hero */}
-      <Center w="100%" h={['50vh', '93vh']} px={['10%', '0%']}>
+      <Center w="100%" minH="400px" h={['50vh', '93vh']} px={['10%', '3%']}>
         <AnimatedTitle />
       </Center>
 
