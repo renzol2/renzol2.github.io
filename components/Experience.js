@@ -16,37 +16,39 @@ import {
   TabPanels,
   Tab,
   TabPanel,
+  Container,
 } from '@chakra-ui/react';
 import colors from '../styles/colors';
 import LandingHeader from './LandingHeader';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import experiences from '../constants/experiences';
 import ExperienceDescription from './ExperienceDescription';
 
 export default function Experience() {
-  const isMobile = useBreakpointValue({ base: true, md: false });
   const [experience, setExperience] = useState(experiences[0]);
+
   return (
-    <Box w="100%" pb="10vh">
+    <Box w="100%" py="10vh">
       {/* Header */}
       <Center w="100%" h="100px">
         <LandingHeader>Experience</LandingHeader>
       </Center>
 
-      {/* Two column layout */}
-      {!isMobile && (
+      {/* Two column desktop layout, one column mobile */}
+      <Container minH="50vh" maxW="100%">
         <Grid
-          p={10}
-          mx={['1%', '15%']}
-          minH={'50vh'}
-          templateColumns={['100%', '30% 70%']}
+          p={{ base: 0, md: 10 }}
+          mx={{ base: '1%', md: '15%' }}
+          templateColumns={{ base: '100%', md: '30% 70%' }}
           borderRadius={50}
         >
           {/* Buttons */}
           <Stack
-            direction={['column']}
-            borderRightWidth={('0px', '2px')}
-            h="100%"
+            direction={{ base: 'row', md: 'column' }}
+            borderRightWidth={{ base: '0px', md: '2px' }}
+            borderBottomWidth={{ base: '2px', md: '0px' }}
+            // FIXME: hacky way of making right border extend full width on desktop
+            minH={{ base: 0, md: '100%' }}
           >
             {experiences.map((exp) => (
               <Button
@@ -54,7 +56,7 @@ export default function Experience() {
                   exp === experience ? colors.MAGENTA : colors.PURPLE
                 }
                 borderColor={colors.PURPLE}
-                mr={4}
+                mr={{ base: 1, md: 4 }}
                 size="lg"
                 fontFamily="monospace"
                 textAlign="left"
@@ -64,6 +66,7 @@ export default function Experience() {
                 onClick={() => {
                   setExperience(exp);
                 }}
+                key={exp.org}
               >
                 {exp.orgAbbrev}
               </Button>
@@ -73,26 +76,7 @@ export default function Experience() {
           {/* Information */}
           <ExperienceDescription experience={experience} />
         </Grid>
-      )}
-
-      {/* Mobile layout (tabs) */}
-      {isMobile && (
-        <Tabs>
-          <TabList>
-            {experiences.map((exp) => (
-              <Tab fontFamily="monospace">{exp.orgAbbrev}</Tab>
-            ))}
-          </TabList>
-
-          <TabPanels>
-            {experiences.map((exp) => (
-              <TabPanel>
-                <ExperienceDescription experience={exp} />
-              </TabPanel>
-            ))}
-          </TabPanels>
-        </Tabs>
-      )}
+      </Container>
     </Box>
   );
 }
