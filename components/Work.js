@@ -14,7 +14,7 @@ export default function Work() {
 
       <VStack mx={['1%', '15%']}>
         {work.map((w) => (
-          <ProjectCard project={w} />
+          <ProjectCard key={w.name} project={w} />
         ))}
       </VStack>
 
