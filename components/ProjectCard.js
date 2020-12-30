@@ -12,7 +12,7 @@ export default function ProjectCard({ project }) {
   const { name, motto, description, link, photo } = project;
   return (
     <CardComponent>
-      <Grid templateColumns={['100%', '40% 60%']}>
+      <Grid templateColumns={{ base: '100%', md: '40% 60%'}}>
         <Link href={link} isExternal>
           <Image src={photo} />
         </Link>
