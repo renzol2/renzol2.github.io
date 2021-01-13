@@ -1,26 +1,7 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Grid,
-  Heading,
-  Stack,
-  Text,
-  Center,
-  Divider,
-  useBreakpointValue,
-  UnorderedList,
-  ListItem,
-  Tabs,
-  TabList,
-  TabPanels,
-  Tab,
-  TabPanel,
-  Container,
-} from '@chakra-ui/react';
+import { useState } from 'react';
+import { Box, Button, Grid, Stack, Center, Container } from '@chakra-ui/react';
 import colors from '../styles/colors';
 import LandingHeader from './LandingHeader';
-import { useEffect, useState } from 'react';
 import experiences from '../constants/experiences';
 import ExperienceDescription from './ExperienceDescription';
 
