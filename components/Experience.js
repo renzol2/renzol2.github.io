@@ -28,7 +28,7 @@ export default function Experience() {
   const [experience, setExperience] = useState(experiences[0]);
 
   return (
-    <Box w="100%" py="10vh">
+    <Box w="100%" py="10vh" id="experience">
       {/* Header */}
       <Center w="100%" h="100px">
         <LandingHeader>Experience</LandingHeader>

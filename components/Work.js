@@ -7,7 +7,7 @@ import videos from '../constants/videos';
 
 export default function Work() {
   return (
-    <Box w="100%">
+    <Box w="100%" id="work">
       {/* Header */}
       <Center w="100%" h="100px">
         <LandingHeader>Things I've Created</LandingHeader>

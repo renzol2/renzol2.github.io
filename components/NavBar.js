@@ -1,4 +1,5 @@
 import { Flex, Text, Box, Heading, Link } from '@chakra-ui/react';
+import NAV from '../constants/nav';
 
 function NavBar() {
   return (
@@ -8,9 +9,11 @@ function NavBar() {
           RL
         </Heading>
         <Box mx="auto" />
-        <Link href="https://github.com/renzol2" isExternal p={2}>
-          GitHub
-        </Link>
+        {NAV.map((n) => (
+          <Link href={n.href} isExternal={n.isExternal} p={2} key={n.href}>
+            {n.text}
+          </Link>
+        ))}
       </Flex>
     </Box>
   );
