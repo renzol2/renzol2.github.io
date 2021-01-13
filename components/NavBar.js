@@ -1,16 +1,37 @@
 import { Flex, Text, Box, Heading, Link } from '@chakra-ui/react';
-import NAV from '../constants/nav';
+import { Link as ScrollLink } from 'react-scroll';
+import nav from '../constants/nav';
 
 function NavBar() {
   return (
     <Box>
       <Flex px={4} pt={2} color="white" alignItems="center">
-        <Heading size="lg" fontFamily="monospace" p={2} fontWeight="bold">
+        {/* Logo */}
+        <Heading
+          size="lg"
+          fontFamily="monospace"
+          px={3}
+          py={2}
+          fontWeight="bold"
+        >
           RL
         </Heading>
+
+        {/* Spacer */}
         <Box mx="auto" />
-        {NAV.map((n) => (
-          <Link href={n.href} isExternal={n.isExternal} p={2} key={n.href}>
+
+        {/* Navigation buttons */}
+        {nav.map((n) => (
+          <Link
+            href={n.href}
+            key={n.href}
+            p={2}
+            as={ScrollLink}
+            activeClass="active"
+            to={n.href}
+            smooth={true}
+            duration={500}
+          >
             {n.text}
           </Link>
         ))}

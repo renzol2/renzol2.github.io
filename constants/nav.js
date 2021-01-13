@@ -1,16 +1,16 @@
 export default [
   {
-    href: '#about',
+    href: 'about',
     isExternal: false,
     text: 'About',
   },
   {
-    href: '#experience',
+    href: 'experience',
     isExternal: false,
     text: 'Experience',
   },
   {
-    href: '#work',
+    href: 'work',
     isExternal: false,
     text: 'Work',
   },
