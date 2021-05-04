@@ -31,7 +31,7 @@ for (let hero of includesDate) {
   } else {
     d[year].total++;
     d[year].totalGood += hero['ALIGN'] === 'Good Characters' ? 1 : 0;
-    d[year].asian += hero['ALIGN'] === 'Good Characters' ? 1 : 0;
+    d[year].asian += hero['is_asian'] === 'True' ? 1 : 0;
     d[year].asianGood +=
       hero['ALIGN'] === 'Good Characters' && hero['is_asian'] === 'True'
         ? 1

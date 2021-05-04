@@ -1,5 +1,6 @@
 import { Box, Center, Heading } from '@chakra-ui/layout';
 import HeroRatioGraph from '../components/HeroRatioGraph';
+import HeroNeutralRatioGraph from '../components/HeroNeutralRatioGraph';
 import RacialDiversityGraph from '../components/RacialDiversityGraph';
 
 export default function IS390() {
@@ -13,6 +14,9 @@ export default function IS390() {
       </Center>
       <Center h="60vh" my="5%">
         <HeroRatioGraph />
+      </Center>
+      <Center h="60vh" my="5%">
+        <HeroNeutralRatioGraph />
       </Center>
     </Box>
   );

@@ -1,5 +1,5 @@
 import { ResponsiveLine } from '@nivo/line';
-import heroRatio from '../constants/heroRatio.json';
+import heroNeutralRatio from '../constants/heroNeutralRatio.json';
 
 export default function HeroRatioGraph() {
   return (
@@ -8,12 +8,12 @@ export default function HeroRatioGraph() {
         {
           axis: 'y',
           value: 0.5,
-          legend: '50%'
+          legend: '50%',
         },
       ]}
-      colors={{ scheme: 'category10' }}
+      colors={{ scheme: 'nivo' }}
       enableSlices="x"
-      data={heroRatio}
+      data={heroNeutralRatio}
       isInteractive
       animate
       margin={{ top: 50, right: 130, bottom: 50, left: 80 }}
@@ -40,7 +40,7 @@ export default function HeroRatioGraph() {
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: 'ratio of good to total characters',
+        legend: 'ratio of good+neutral to total characters',
         legendOffset: -55,
         legendPosition: 'middle',
       }}
