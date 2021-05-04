@@ -16,7 +16,7 @@ export default function HeroRatioGraph() {
       data={heroNeutralRatio}
       isInteractive
       animate
-      margin={{ top: 50, right: 130, bottom: 50, left: 80 }}
+      margin={{ top: 50, right: 130, bottom: 50, left: 110 }}
       xScale={{ type: 'point' }}
       yScale={{
         type: 'linear',

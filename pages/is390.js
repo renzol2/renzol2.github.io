@@ -10,6 +10,7 @@ import {
 import HeroRatioGraph from '../components/HeroRatioGraph';
 import HeroNeutralRatioGraph from '../components/HeroNeutralRatioGraph';
 import RacialDiversityGraph from '../components/RacialDiversityGraph';
+import { Image } from '@chakra-ui/image';
 
 export default function IS390() {
   return (
@@ -99,19 +100,142 @@ export default function IS390() {
           improve on if and when I re-approach this project.
         </Text>
         <Text as="p" fontSize="lg" my={2}>
+          Also, an additional disclaimer about the data that I'll take straight
+          from Kharkar:
+        </Text>
+        <Text as="p" fontSize="lg" my={2} fontWeight="hairline">
+          Just to point out one known source of error, comic books constantly
+          write and rewrite characters as well as pass on the mantle of one
+          superhero/supervillain to another character. Sometimes, a hero will
+          originally be written as white and many decades later will be
+          rewritten as black, for example. When scraping the wiki page for that
+          character, it is possible that the original publication date will be
+          fetched instead of the rewriting date. All this is to say, note that
+          there will be minor errors although I have tried my best to maintain
+          the accuracy of the scraped data.
+        </Text>
+        <Text as="p" fontSize="lg" my={2}>
           Anyway, here's what I was able to do with the data I gathered!
+        </Text>
+
+        <Heading as="h3" fontWeight="bold" my="4%">
+          How Has Racial Diversity in Comics Changed Through Time?
+        </Heading>
+        <Text as="p" fontSize="lg" my={2}>
+          I essentially did the same graphs that Kharkvar did but with Asian
+          superheroes. I'm not confident that this "racial diversity score" is
+          the best measurement of diversity in comics, but for the sake of
+          consistency, I'll use the same scoring system that he uses, shown
+          below:
+        </Text>
+        <Center w="100%" my="2%">
+          <Image
+            alt="Racial diversity"
+            src="images/racial_diversity.png"
+            boxSize={600}
+            objectFit="cover"
+          />
+        </Center>
+        <Text as="p" fontSize="lg" my={2}>
+          And shown below is the graph with my data:
         </Text>
       </Box>
 
-      <Center h="60vh" my="5%">
+      <Heading textAlign="center" fontWeight="hairline" fontSize="3xl" mt="3%">
+        Racial Diversity Over the Years (Asian superheroes)
+      </Heading>
+      <Center h="60vh" mb="5%">
         <RacialDiversityGraph />
       </Center>
-      <Center h="60vh" my="5%">
+
+      <Box my="2%" mx="25%">
+        <Text as="p" fontSize="lg" my={2}>
+          Unlike Kharkvar's graph, superheroes did not see any significant rise
+          in representation of Asian characters, and the percentage of Asian to
+          non-Asian superheroes has remained consistently very small. I do think
+          this is partly or mostly attributed to my lack of thorough data, and
+          with a more well-scraped dataset, the racial diversity score would
+          likely rise at least a bit more similarly to Kharkvar's graph.
+        </Text>
+        <Text as="p" fontSize="lg" my={2}>
+          Interestingly, the spike at 1938 for DC characters is likely caused by
+          the character{' '}
+          <Link
+            as="a"
+            href="https://dc.fandom.com/wiki/Wing_How_(New_Earth)"
+            target="_blank"
+            color="blueviolet"
+          >
+            Wing How
+          </Link>
+          , a Chinese immigrant who moved to America to escape Japanese
+          persecution before World War II and joined as a
+          chaffeur/crime-fighting companion to the Crimson Avenger. He first
+          appeared in Detective Comics #20, part of{' '}
+          <font style={{ fontStyle: 'italic' }}>
+            Detective Comics (Volume 1)
+          </font>
+          , issued in October 1938.
+        </Text>
+        <Center w="100%" my="2%">
+          <Image
+            alt="Wing How"
+            src="images/wing_how.jpg"
+            boxSize={400}
+            objectFit="cover"
+          />
+        </Center>
+
+        <Heading as="h3" fontWeight="bold" my="4%">
+          Are Asian Characters Represented as Heroes or Villains?
+        </Heading>
+        <Text as="p" fontSize="lg" my={2}>
+          Moving past just diversity, Kharkvar also analyzed the alignment of
+          Black superhero characters and how they were portrayed in superhero
+          stories. Those original results seem to imply that there was a binary
+          selection between good/bad, but the FiveThirtyEight dataset had a
+          good/neutral/bad alignment selection, so I decided to make two graphs:
+          one graph for the ratio between just good characters to total
+          characters as the years go by (for both all superheroes and all Asian
+          superheroes), and then another graph with both good AND neutral
+          characters against the total number of characters (also for all
+          superheroes and all Asian superheroes).
+        </Text>
+      </Box>
+
+      <Heading textAlign="center" fontWeight="hairline" fontSize="3xl" mt="2%">
+        Ratio of # of Good Characters to Total # of Characters
+      </Heading>
+      <Center h="50vh">
         <HeroRatioGraph />
       </Center>
-      <Center h="60vh" my="5%">
+      <Heading textAlign="center" fontWeight="hairline" fontSize="3xl" mt="2%">
+        Ratio of # of Good+Neutral Characters to Total # of Characters
+      </Heading>
+      <Center h="50vh">
         <HeroNeutralRatioGraph />
       </Center>
+
+      <Box my="2%" mx="25%">
+        <Text as="p" fontSize="lg" my={2}>
+          Just like Black superheroes, Asian superheroes tend to be above the
+          ratio for all superheroes, at least nowadays. Funnily enough, the dip
+          in the late 1960s/early 1970s is actually a data mistake. The
+          Wikipedia list for Marvel superheroes lists Wave, the upcoming
+          Filipina(woo!) superhero. However, since I naively just checked if any
+          Marvel superheroes had the word 'Wave' in their name, this also
+          snagged the villains Crime-Wave and his agent Torpedo (Agent of
+          Crime-Wave), who I don't believe are delineated as being Asian at all.
+        </Text>
+        <Text as="p" fontSize="lg" my={2}>
+          Another mistake is the Mandarin's Robotic Hulk, who's listed as{' '}
+          <Code>Robert Bruce Banner (Mandarin Robot) (Earth-616)</Code> and was
+          caught under the Mandarin's name. All three of these characters first
+          debuted in 1969, which led to that little dip. In the mid 1970s,
+          however, the influx of more good-aligned Asian superheroes caused the
+          ratio to rise in both graphs.
+        </Text>
+      </Box>
     </Box>
   );
 }
