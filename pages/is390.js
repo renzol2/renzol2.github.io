@@ -265,7 +265,7 @@ export default function IS390() {
             adaptations.
           </Text>
         </Text>
-        <Text as="p" fontSize="lg" my={2}>
+        <Text as="p" fontSize="lg" my={2} fontWeight="normal">
           As time goes on, I hope that AAPI, BIPOC, LGTBQ+, and other
           marginalized groups can find a space within the comics universe, both
           in the stories and characters we hold dear to our hearts as well as in
