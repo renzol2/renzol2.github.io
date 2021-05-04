@@ -11,6 +11,7 @@ import HeroRatioGraph from '../components/HeroRatioGraph';
 import HeroNeutralRatioGraph from '../components/HeroNeutralRatioGraph';
 import RacialDiversityGraph from '../components/RacialDiversityGraph';
 import { Image } from '@chakra-ui/image';
+import Footer from '../components/Footer';
 
 export default function IS390() {
   return (
@@ -122,7 +123,7 @@ export default function IS390() {
           How Has Racial Diversity in Comics Changed Through Time?
         </Heading>
         <Text as="p" fontSize="lg" my={2}>
-          I essentially did the same graphs that Kharkvar did but with Asian
+          I essentially did the same graphs that Kharkar did but with Asian
           superheroes. I'm not confident that this "racial diversity score" is
           the best measurement of diversity in comics, but for the sake of
           consistency, I'll use the same scoring system that he uses, shown
@@ -150,12 +151,12 @@ export default function IS390() {
 
       <Box my="2%" mx="25%">
         <Text as="p" fontSize="lg" my={2}>
-          Unlike Kharkvar's graph, superheroes did not see any significant rise
+          Unlike Kharkar's graph, superheroes did not see any significant rise
           in representation of Asian characters, and the percentage of Asian to
           non-Asian superheroes has remained consistently very small. I do think
           this is partly or mostly attributed to my lack of thorough data, and
           with a more well-scraped dataset, the racial diversity score would
-          likely rise at least a bit more similarly to Kharkvar's graph.
+          likely rise at least a bit more similarly to Kharkar's graph.
         </Text>
         <Text as="p" fontSize="lg" my={2}>
           Interestingly, the spike at 1938 for DC characters is likely caused by
@@ -190,7 +191,7 @@ export default function IS390() {
           Are Asian Characters Represented as Heroes or Villains?
         </Heading>
         <Text as="p" fontSize="lg" my={2}>
-          Moving past just diversity, Kharkvar also analyzed the alignment of
+          Moving past just diversity, Kharkar also analyzed the alignment of
           Black superhero characters and how they were portrayed in superhero
           stories. Those original results seem to imply that there was a binary
           selection between good/bad, but the FiveThirtyEight dataset had a
@@ -235,7 +236,44 @@ export default function IS390() {
           however, the influx of more good-aligned Asian superheroes caused the
           ratio to rise in both graphs.
         </Text>
+
+        <Heading as="h3" fontWeight="bold" my="4%">
+          Wrapping Up
+        </Heading>
+        <Text as="p" fontSize="lg" my={2}>
+          Despite my faulty data science skills, my conclusions fall quite
+          similarly to Ritvik Kharkar's. The good news is that, like in most
+          media, racial diversity is slowly and steadily increasing, and that
+          both Asian and Black superheroes are written as heroes in comics
+          rather than villains (though that isn't necessarily a good or bad
+          thing - this statistic requires much more close-reading and nuance of
+          the actual source material).
+        </Text>
+        <Text as="p" fontSize="lg" my={2}>
+          Despite a steady increase in representation of characters, it often
+          does not match up with the actual production and industry behind
+          comics. More Asian and BIPOC writers, artists, and creators need the
+          space to tell their own stories, and representation within the
+          industry is a much more institutional issue that won't be solved
+          overnight.
+        </Text>
+        <Text as="p" fontSize="lg" my={2}>
+          Still, progress is progress - quoting from Kharkar:
+          <Text fontWeight="hairline">
+            we need to applaud and support racial diversity in comics in any way
+            it may manifest, especially with an increasing number of film and TV
+            adaptations.
+          </Text>
+        </Text>
+        <Text as="p" fontSize="lg" my={2}>
+          As time goes on, I hope that AAPI, BIPOC, LGTBQ+, and other
+          marginalized groups can find a space within the comics universe, both
+          in the stories and characters we hold dear to our hearts as well as in
+          the positions of writers, artists, creators, designers, and
+          storytellers who create those beloved characters.
+        </Text>
       </Box>
+      <Footer />
     </Box>
   );
 }
