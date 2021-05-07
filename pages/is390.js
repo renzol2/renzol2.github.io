@@ -16,7 +16,7 @@ import Footer from '../components/Footer';
 export default function IS390() {
   return (
     <Box w="100%">
-      <Box my="2%" mx="25%">
+      <Box my="2%" mx={{ base: '10%', lg: '25%' }}>
         <Heading as="h1" textAlign="left" fontWeight="black" fontSize="6xl">
           The State of Asian Superheroes in Comics
         </Heading>
@@ -259,11 +259,11 @@ export default function IS390() {
         </Text>
         <Text as="p" fontSize="lg" my={2}>
           Still, progress is progress - quoting from Kharkar:
-          <Text fontWeight="hairline">
-            we need to applaud and support racial diversity in comics in any way
-            it may manifest, especially with an increasing number of film and TV
-            adaptations.
-          </Text>
+        </Text>
+        <Text as="p" fontSize="lg" my={2} fontWeight="hairline">
+          [W]e need to applaud and support racial diversity in comics in any way
+          it may manifest, especially with an increasing number of film and TV
+          adaptations.
         </Text>
         <Text as="p" fontSize="lg" my={2} fontWeight="normal">
           As time goes on, I hope that AAPI, BIPOC, LGTBQ+, and other
