@@ -21,8 +21,16 @@ export default function IS390() {
           The State of Asian Superheroes in Comics
         </Heading>
         <Text as="h2" fontWeight="hairline" my={3}>
-          <font style={{ fontWeight: 'normal' }}>Renzo Ledesma</font> | IS 390
-          Independent Research Project
+          <font style={{ fontWeight: 'normal' }}>Renzo Ledesma</font> |{' '}
+          <Link
+            as="a"
+            target="_blank"
+            href="https://ischool.illinois.edu/degrees-programs/courses/is390"
+            color="blueviolet"
+          >
+            IS 390
+          </Link>
+          {' '}Independent Research Project
         </Text>
         <Divider mb="7%" mt="2%" />
 
