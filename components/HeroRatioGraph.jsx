@@ -1,22 +1,26 @@
 import { ResponsiveLine } from '@nivo/line';
-import racialDiversity from '../constants/racialDiversity.json';
+import heroRatio from '../constants/is390/heroRatio.json';
 
-export default function RacialDiversityGraph() {
+export default function HeroRatioGraph() {
   return (
     <ResponsiveLine
-      colors={{ scheme: 'dark2' }}
+      markers={[
+        {
+          axis: 'y',
+          value: 0.5,
+          legend: '50%'
+        },
+      ]}
+      colors={{ scheme: 'category10' }}
       enableSlices="x"
-      data={racialDiversity}
+      data={heroRatio}
       isInteractive
-      useMesh
       animate
-      margin={{ top: 50, right: 110, bottom: 50, left: 80 }}
+      margin={{ top: 50, right: 130, bottom: 50, left: 80 }}
       xScale={{ type: 'point' }}
       yScale={{
         type: 'linear',
-        min: 'auto',
-        max: 'auto',
-        stacked: true,
+        stacked: false,
         reverse: false,
       }}
       yFormat=" >-.5f"
@@ -36,14 +40,12 @@ export default function RacialDiversityGraph() {
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: 'racial diversity score',
+        legend: 'ratio of good to total characters',
         legendOffset: -55,
         legendPosition: 'middle',
       }}
       pointSize={10}
-      pointColor={{ theme: 'background' }}
       pointBorderWidth={2}
-      pointBorderColor={{ from: 'serieColor' }}
       pointLabelYOffset={-12}
       useMesh={true}
       legends={[

@@ -1,5 +1,5 @@
 import { ResponsiveLine } from '@nivo/line';
-import heroNeutralRatio from '../constants/heroNeutralRatio.json';
+import heroNeutralRatio from '../constants/is390/heroNeutralRatio';
 
 export default function HeroRatioGraph() {
   return (
