@@ -1,14 +1,20 @@
-import { Box, Center, Heading } from '@chakra-ui/react';
+import { Box, Center, Heading, useBreakpointValue } from '@chakra-ui/react';
 import Paragraph from '../components/Paragraph';
 
 const Home = () => {
+  const BREAKPOINT = 'md';
   return (
-    <Center h="100vh">
-      <Box w="58%">
-        <Heading as="h1" fontFamily="monospace" fontSize="8xl">
+    <Center minH="100vh">
+      <Box w={{ base: '90%', [BREAKPOINT]: '58%' }}>
+        <Heading
+          as="h1"
+          fontFamily="monospace"
+          fontSize={{ base: '4rem', [BREAKPOINT]: '6rem' }}
+          lineHeight="3.4rem"
+        >
           *Renzo Ledesma
         </Heading>
-        <Box w="85%">
+        <Box w={{ base: '100%', [BREAKPOINT]: '85%' }} mt="2rem">
           <Paragraph>
             Hi! 👋 I’m a web developer, musician & music-lover, coffee drinker,
             and CS + Music Student @ UIUC.
