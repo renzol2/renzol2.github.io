@@ -1,5 +1,6 @@
-import { Box, Center, Heading, useBreakpointValue } from '@chakra-ui/react';
+import { Box, Center, Heading } from '@chakra-ui/react';
 import Paragraph from '../components/Paragraph';
+import StyledLink from '../components/StyledLink';
 
 const Home = () => {
   const BREAKPOINT = 'md';
@@ -21,8 +22,19 @@ const Home = () => {
           </Paragraph>
           <Paragraph>
             Most recently, I was working as a SWE Intern @ Cargill. I enjoy
-            creating everything from web apps to piano covers! View my projects,
-            resume, or contact me :)
+            creating everything from web apps to piano covers!
+          </Paragraph>
+          <Paragraph>
+            This website is a WIP, so check out my{' '}
+            <StyledLink href="https://www.linkedin.com/in/renzo-marc-ledesma/">
+              LinkedIn
+            </StyledLink>{' '}
+            and{' '}
+            <StyledLink href="https://github.com/renzol2">GitHub</StyledLink>{' '}
+            right now. Or, check out{' '}
+            <StyledLink href="/is390">
+              this article I wrote on Asian representation in superhero comics.
+            </StyledLink>
           </Paragraph>
         </Box>
       </Box>
