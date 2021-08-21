@@ -1,19 +1,7 @@
-import { Box, Center, Heading, Text, Link } from '@chakra-ui/react';
-import NextLink from 'next/link';
+import { Box, Center, Heading } from '@chakra-ui/react';
+import Paragraph from '../components/Paragraph';
 
-export default function Home() {
-  const Paragraph = ({ children }) => (
-    <Text
-      mb="1.5rem"
-      fontFamily="monospace"
-      fontSize="lg"
-      fontWeight="light"
-      lineHeight="tall"
-    >
-      {children}
-    </Text>
-  );
-
+const Home = () => {
   return (
     <Center h="100vh">
       <Box w="58%">
@@ -26,12 +14,14 @@ export default function Home() {
             and CS + Music Student @ UIUC.
           </Paragraph>
           <Paragraph>
-            Currently working as a SWE Intern @ Cargill. I enjoy creating
-            everything from web apps to piano covers! View my projects, resume,
-            or contact me :)
+            Most recently, I was working as a SWE Intern @ Cargill. I enjoy
+            creating everything from web apps to piano covers! View my projects,
+            resume, or contact me :)
           </Paragraph>
         </Box>
       </Box>
     </Center>
   );
-}
+};
+
+export default Home;
