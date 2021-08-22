@@ -1,8 +1,8 @@
 import { Box, Center, Heading } from '@chakra-ui/react';
+import Header from '../components/Header';
 import Paragraph from '../components/Paragraph';
 import StyledLink from '../components/StyledLink';
 import colors from '../styles/colors';
-import '@fontsource/roboto-mono';
 
 const Home = () => {
   const BREAKPOINT = 'md';
@@ -12,15 +12,9 @@ const Home = () => {
       bgGradient={`linear(to-b, ${colors.BACKGROUND_PINK}, ${colors.BACKGROUND_ORANGE})`}
     >
       <Box w={{ base: '90%', [BREAKPOINT]: '58%' }}>
-        <Heading
-          as="h1"
-          fontFamily="monospace"
-          fontSize={{ base: '4rem', [BREAKPOINT]: '6rem' }}
-          lineHeight="3.4rem"
-          color={colors.PRIMARY}
-        >
+        <Header as="h1" breakpoint={BREAKPOINT}>
           *Renzo Ledesma
-        </Heading>
+        </Header>
         <Box w={{ base: '100%', [BREAKPOINT]: '85%' }} mt="2rem">
           <Paragraph>
             Hi! 👋 I’m a web developer, musician & music-lover, coffee drinker,
