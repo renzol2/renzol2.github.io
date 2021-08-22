@@ -7,13 +7,17 @@ import '@fontsource/roboto-mono';
 const Home = () => {
   const BREAKPOINT = 'md';
   return (
-    <Center minH="100vh">
+    <Center
+      minH={{ base: '130vh', [BREAKPOINT]: '100vh' }}
+      bgGradient={`linear(to-b, ${colors.BACKGROUND_PINK}, ${colors.BACKGROUND_ORANGE})`}
+    >
       <Box w={{ base: '90%', [BREAKPOINT]: '58%' }}>
         <Heading
           as="h1"
           fontFamily="monospace"
           fontSize={{ base: '4rem', [BREAKPOINT]: '6rem' }}
           lineHeight="3.4rem"
+          color={colors.PRIMARY}
         >
           *Renzo Ledesma
         </Heading>

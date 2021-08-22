@@ -15,7 +15,7 @@ import Footer from '../components/Footer';
 
 export default function IS390() {
   return (
-    <Box w="100%">
+    <Box w="100%" fontFamily="sans-serif">
       <Box my="2%" mx={{ base: '10%', lg: '25%' }}>
         <Heading as="h1" textAlign="left" fontWeight="black" fontSize="6xl">
           The State of Asian Superheroes in Comics
