@@ -7,17 +7,23 @@ import {
   Link,
   Text,
 } from '@chakra-ui/layout';
-import HeroRatioGraph from '../components/HeroRatioGraph';
-import HeroNeutralRatioGraph from '../components/HeroNeutralRatioGraph';
-import RacialDiversityGraph from '../components/RacialDiversityGraph';
 import { Image } from '@chakra-ui/image';
-import Footer from '../components/Footer';
+import HeroRatioGraph from '../components/is390/HeroRatioGraph';
+import HeroNeutralRatioGraph from '../components/is390/HeroNeutralRatioGraph';
+import RacialDiversityGraph from '../components/is390/RacialDiversityGraph';
+import Footer from '../components/is390/Footer';
 
 export default function IS390() {
   return (
     <Box w="100%" fontFamily="sans-serif">
       <Box my="2%" mx={{ base: '10%', lg: '25%' }}>
-        <Heading as="h1" textAlign="left" fontWeight="black" fontSize="6xl">
+        <Heading
+          as="h1"
+          textAlign="left"
+          fontWeight="black"
+          fontSize="6xl"
+          fontFamily="sans-serif"
+        >
           The State of Asian Superheroes in Comics
         </Heading>
         <Text as="h2" fontWeight="hairline" my={3}>
@@ -29,12 +35,12 @@ export default function IS390() {
             color="blueviolet"
           >
             IS 390
-          </Link>
-          {' '}Independent Research Project
+          </Link>{' '}
+          Independent Research Project
         </Text>
         <Divider mb="7%" mt="2%" />
 
-        <Heading as="h3" fontWeight="bold">
+        <Heading as="h3" fontWeight="bold" fontFamily="sans-serif">
           Motivation
         </Heading>
         <Text as="p" fontSize="lg" my={2}>
@@ -63,7 +69,7 @@ export default function IS390() {
           Let's start with the data! 🦸‍♀️
         </Text>
 
-        <Heading as="h3" fontWeight="bold" mt="4%">
+        <Heading as="h3" fontWeight="bold" mt="4%" fontFamily="sans-serif">
           Data
         </Heading>
         <Text as="p" fontSize="lg" my={2}>
@@ -127,7 +133,7 @@ export default function IS390() {
           Anyway, here's what I was able to do with the data I gathered!
         </Text>
 
-        <Heading as="h3" fontWeight="bold" my="4%">
+        <Heading as="h3" fontWeight="bold" my="4%" fontFamily="sans-serif">
           How Has Racial Diversity in Comics Changed Through Time?
         </Heading>
         <Text as="p" fontSize="lg" my={2}>
@@ -150,7 +156,13 @@ export default function IS390() {
         </Text>
       </Box>
 
-      <Heading textAlign="center" fontWeight="hairline" fontSize="3xl" mt="3%">
+      <Heading
+        textAlign="center"
+        fontWeight="hairline"
+        fontSize="3xl"
+        mt="3%"
+        fontFamily="sans-serif"
+      >
         Racial Diversity Over the Years (Asian superheroes)
       </Heading>
       <Center h="60vh" mb="5%">
@@ -195,7 +207,7 @@ export default function IS390() {
           />
         </Center>
 
-        <Heading as="h3" fontWeight="bold" my="4%">
+        <Heading as="h3" fontWeight="bold" my="4%" fontFamily="sans-serif">
           Are Asian Characters Represented as Heroes or Villains?
         </Heading>
         <Text as="p" fontSize="lg" my={2}>
@@ -212,13 +224,25 @@ export default function IS390() {
         </Text>
       </Box>
 
-      <Heading textAlign="center" fontWeight="hairline" fontSize="3xl" mt="2%">
+      <Heading
+        textAlign="center"
+        fontWeight="hairline"
+        fontSize="3xl"
+        mt="2%"
+        fontFamily="sans-serif"
+      >
         Ratio of # of Good Characters to Total # of Characters
       </Heading>
       <Center h="50vh">
         <HeroRatioGraph />
       </Center>
-      <Heading textAlign="center" fontWeight="hairline" fontSize="3xl" mt="2%">
+      <Heading
+        textAlign="center"
+        fontWeight="hairline"
+        fontSize="3xl"
+        mt="2%"
+        fontFamily="sans-serif"
+      >
         Ratio of # of Good+Neutral Characters to Total # of Characters
       </Heading>
       <Center h="50vh">
@@ -245,7 +269,7 @@ export default function IS390() {
           ratio to rise in both graphs.
         </Text>
 
-        <Heading as="h3" fontWeight="bold" my="4%">
+        <Heading as="h3" fontWeight="bold" my="4%" fontFamily="sans-serif">
           Wrapping Up
         </Heading>
         <Text as="p" fontSize="lg" my={2}>
