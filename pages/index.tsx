@@ -1,6 +1,8 @@
 import { Box, Center, Heading } from '@chakra-ui/react';
 import Paragraph from '../components/Paragraph';
 import StyledLink from '../components/StyledLink';
+import colors from '../styles/colors';
+import '@fontsource/roboto-mono';
 
 const Home = () => {
   const BREAKPOINT = 'md';
@@ -18,21 +20,42 @@ const Home = () => {
         <Box w={{ base: '100%', [BREAKPOINT]: '85%' }} mt="2rem">
           <Paragraph>
             Hi! 👋 I’m a web developer, musician & music-lover, coffee drinker,
-            and CS + Music Student @ UIUC.
+            and{' '}
+            <StyledLink
+              color={colors.URBANA_ORANGE}
+              href="https://music.illinois.edu/bachelor-science-computer-science-music"
+            >
+              CS + Music Student @ UIUC.
+            </StyledLink>
           </Paragraph>
           <Paragraph>
-            Most recently, I was working as a SWE Intern @ Cargill. I enjoy
-            creating everything from web apps to piano covers!
+            Most recently, I was working as a Full-Stack Software Engineering
+            Intern @{' '}
+            <StyledLink
+              color={colors.CARGILL_GREEN}
+              href="https://researchpark.illinois.edu/tenant_directory/cargill-innovation-lab/"
+            >
+              Cargill
+            </StyledLink>
+            . I enjoy creating everything from web apps to piano covers!
           </Paragraph>
           <Paragraph>
             This website is a WIP, so check out my{' '}
-            <StyledLink href="https://www.linkedin.com/in/renzo-marc-ledesma/">
+            <StyledLink
+              color={colors.PRIMARY}
+              href="https://www.linkedin.com/in/renzo-marc-ledesma/"
+            >
               LinkedIn
             </StyledLink>{' '}
             and{' '}
-            <StyledLink href="https://github.com/renzol2">GitHub</StyledLink>{' '}
+            <StyledLink
+              color={colors.PRIMARY}
+              href="https://github.com/renzol2"
+            >
+              GitHub
+            </StyledLink>{' '}
             right now. Or, check out{' '}
-            <StyledLink href="/is390">
+            <StyledLink color={colors.PRIMARY} href="/is390">
               this article I wrote on Asian representation in superhero comics.
             </StyledLink>
           </Paragraph>

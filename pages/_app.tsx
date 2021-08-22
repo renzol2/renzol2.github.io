@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import { ChakraProvider } from '@chakra-ui/react';
+import theme from '../styles/theme';
 
 function App({ Component, pageProps }) {
   return (
-    <ChakraProvider resetCSS>
+    <ChakraProvider theme={theme} resetCSS>
       <Head>
         <title>Renzo Ledesma</title>
       </Head>      

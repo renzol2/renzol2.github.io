@@ -1,10 +1,10 @@
 import { Link } from '@chakra-ui/react';
 import NextLink from 'next/link';
 
-const StyledLink = ({ href, children }) => {
+const StyledLink = ({ href, color, children }) => {
   return (
     <NextLink href={href} passHref>
-      <Link color="#D60270" fontWeight="bold">
+      <Link color={color} fontWeight="bold">
         {children}
       </Link>
     </NextLink>
