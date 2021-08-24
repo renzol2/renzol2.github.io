@@ -1,5 +1,5 @@
 import { ResponsiveLine } from '@nivo/line';
-import racialDiversity from '../constants/racialDiversity.json';
+import racialDiversity from '../../constants/is390/racialDiversity.json';
 
 export default function RacialDiversityGraph() {
   return (

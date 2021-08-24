@@ -1,8 +1,0 @@
-export default {
-  MAGENTA: '#AD4792',
-  MAGENTA_TRANSLUCENT: 'rgba(214,2,112, 0.2)',
-  MAGENTA_LIGHT: '#C779B2',
-  PURPLE: '#4F0643',
-  PURPLE_EXTRA_LIGHT: '#ffb3fa',
-  MAGENTA_DARK: '#2E0327',
-};
