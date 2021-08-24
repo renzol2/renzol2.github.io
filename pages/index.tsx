@@ -19,7 +19,7 @@ const Home = () => {
       }
     >
       <Logo />
-      <Center minH={{ base: '130vh', [BREAKPOINT]: '100vh' }}>
+      <Center minH={{ base: '120vh', [BREAKPOINT]: '100vh' }}>
         <Box w={{ base: '90%', [BREAKPOINT]: '58%' }}>
           <Header as="h1" breakpoint={BREAKPOINT}>
             *Renzo Ledesma

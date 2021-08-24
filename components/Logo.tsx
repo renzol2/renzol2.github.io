@@ -7,7 +7,8 @@ const Logo = () => {
     <Box
       pt="1rem"
       pl="1rem"
-      pos="absolute"
+      pos={{ base: 'relative', md: 'fixed' }}
+      mb={{ base: '2rem', md: '0' }}
       w="100%"
       display="flex"
       alignItems="center"
