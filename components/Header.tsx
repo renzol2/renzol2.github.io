@@ -1,6 +1,5 @@
 import { Heading } from '@chakra-ui/layout';
 import colors from '../styles/colors';
-import '@fontsource/roboto-mono/700.css';
 
 const Header = ({ breakpoint, as, children }) => {
   return (

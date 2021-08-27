@@ -1,8 +1,16 @@
 import { extendTheme } from '@chakra-ui/react';
 const theme = extendTheme({
-  fonts: {
-    heading: 'Roboto Mono',
-    body: 'Roboto Mono',
+  components: {
+    Heading: {
+      baseStyle: {
+        fontFamily: 'monospace',
+      },
+    },
+    Text: {
+      baseStyle: {
+        fontFamily: 'monospace',
+      },
+    },
   },
 });
 export default theme;

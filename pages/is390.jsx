@@ -26,7 +26,7 @@ export default function IS390() {
         >
           The State of Asian Superheroes in Comics
         </Heading>
-        <Text as="h2" fontWeight="hairline" my={3}>
+        <Text as="h2" fontWeight="light" my={3}>
           <font style={{ fontWeight: 'normal' }}>Renzo Ledesma</font> |{' '}
           <Link
             as="a"
@@ -118,7 +118,7 @@ export default function IS390() {
           Also, an additional disclaimer about the data that I'll take straight
           from Kharkar:
         </Text>
-        <Text as="p" fontSize="lg" my={2} fontWeight="hairline">
+        <Text as="p" fontSize="lg" my={2} fontWeight="light">
           Just to point out one known source of error, comic books constantly
           write and rewrite characters as well as pass on the mantle of one
           superhero/supervillain to another character. Sometimes, a hero will
@@ -158,7 +158,7 @@ export default function IS390() {
 
       <Heading
         textAlign="center"
-        fontWeight="hairline"
+        fontWeight="light"
         fontSize="3xl"
         mt="3%"
         fontFamily="sans-serif"
@@ -226,7 +226,7 @@ export default function IS390() {
 
       <Heading
         textAlign="center"
-        fontWeight="hairline"
+        fontWeight="light"
         fontSize="3xl"
         mt="2%"
         fontFamily="sans-serif"
@@ -238,7 +238,7 @@ export default function IS390() {
       </Center>
       <Heading
         textAlign="center"
-        fontWeight="hairline"
+        fontWeight="light"
         fontSize="3xl"
         mt="2%"
         fontFamily="sans-serif"
@@ -292,7 +292,7 @@ export default function IS390() {
         <Text as="p" fontSize="lg" my={2}>
           Still, progress is progress - quoting from Kharkar:
         </Text>
-        <Text as="p" fontSize="lg" my={2} fontWeight="hairline">
+        <Text as="p" fontSize="lg" my={2} fontWeight="light">
           [W]e need to applaud and support racial diversity in comics in any way
           it may manifest, especially with an increasing number of film and TV
           adaptations.
