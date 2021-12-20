@@ -1,5 +1,5 @@
 import { Heading } from '@chakra-ui/layout';
-import { useColorMode } from '@chakra-ui/system';
+import { useColorMode } from '@chakra-ui/react';
 import colors from '../styles/colors';
 
 const Header = ({ breakpoint, as, children }) => {

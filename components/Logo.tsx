@@ -17,7 +17,7 @@ const Logo = () => {
         😴
       </Text>
       <Spacer />
-      <DarkModeSwitch fixed={false} />
+      {/* <DarkModeSwitch fixed={false} /> */}
     </Box>
   );
 };
