@@ -13,14 +13,8 @@ const Logo = () => {
       display="flex"
       alignItems="center"
     >
-      <Text fontSize="3rem">
-        <span
-          style={{ fontWeight: 'bolder', color: colors.PRIMARY }}
-        >{`{`}</span>
-        <span style={{ fontWeight: 'lighter' }}>RL</span>
-        <span
-          style={{ fontWeight: 'bolder', color: colors.PRIMARY }}
-        >{`}`}</span>
+      <Text fontSize="2rem">
+        😴
       </Text>
       <Spacer />
       <DarkModeSwitch fixed={false} />

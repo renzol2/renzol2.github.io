@@ -1,9 +1,18 @@
-import { Box, Center, Heading, ScaleFade, useColorMode } from '@chakra-ui/react';
+import {
+  Box,
+  Center,
+  Heading,
+  ScaleFade,
+  useColorMode,
+  UnorderedList,
+  ListItem,
+} from '@chakra-ui/react';
 import Header from '../components/Header';
 import Logo from '../components/Logo';
 import Paragraph from '../components/Paragraph';
 import StyledLink from '../components/StyledLink';
 import colors from '../styles/colors';
+import '@fontsource/roboto-mono';
 
 const Home = () => {
   const { colorMode } = useColorMode();
@@ -11,67 +20,68 @@ const Home = () => {
 
   const BREAKPOINT = 'md';
   return (
-    <Box
-      bgColor={isDark && colors.BACKGROUND_DARK}
-      bgGradient={
-        !isDark &&
-        `linear(to-b, ${colors.BACKGROUND_PINK}, ${colors.BACKGROUND_ORANGE})`
-      }
-    >
+    <Box bgColor={isDark ? 'charcoal' : 'pink.100'}>
       <Logo />
-      <Center minH={{ base: '120vh', [BREAKPOINT]: '100vh' }}>
+      <Center minH="100vh">
         <Box w={{ base: '90%', [BREAKPOINT]: '58%' }}>
-          <ScaleFade in transition={{ enter: { duration: 0.3 } }}>
-            <Header as="h1" breakpoint={BREAKPOINT}>
-              *Renzo Ledesma
-            </Header>
-          </ScaleFade>
-          <ScaleFade in transition={{ enter: { duration: 0.5 } }}>
-            <Box w={{ base: '100%', [BREAKPOINT]: '85%' }} mt="2rem">
-              <Paragraph>
-                Hi! 👋 I’m a web developer, musician & music-lover, coffee
-                drinker, and{' '}
+          <Header as="h1" breakpoint={BREAKPOINT}>
+            hi, i'm renzo!
+          </Header>
+          <Box w={{ base: '100%', [BREAKPOINT]: '85%' }} mt="2rem">
+            <Paragraph>i write code and music :)</Paragraph>
+            <Paragraph>currently i am a</Paragraph>
+            <UnorderedList mb="2rem">
+              <ListItem>
                 <StyledLink
                   color={colors.URBANA_ORANGE}
-                  href="https://music.illinois.edu/bachelor-science-computer-science-music"
+                  href="https://music.illinois.edu/area/cs-music"
                 >
-                  CS + Music Student @ UIUC.
+                  cs + music student @ uiuc
                 </StyledLink>
-              </Paragraph>
-              <Paragraph>
-                Most recently, I was working as a Full-Stack Software Engineering
-                Intern @{' '}
-                <StyledLink
-                  color={colors.CARGILL_GREEN}
-                  href="https://researchpark.illinois.edu/tenant_directory/cargill-innovation-lab/"
-                >
-                  Cargill
+              </ListItem>
+              <ListItem>
+                <StyledLink color="darkblue" href="http://psauiuc.org/">
+                  filipino culture night co-coordinator @ psa uiuc
                 </StyledLink>
-                . I enjoy creating everything from web apps to piano covers!
-              </Paragraph>
-              <Paragraph>
-                This website is a WIP, so check out my{' '}
+              </ListItem>
+              <ListItem>
                 <StyledLink
-                  color={colors.PRIMARY}
-                  href="https://www.linkedin.com/in/renzo-marc-ledesma/"
+                  color={colors.PRAIRIELEARN_BLUE}
+                  href="https://www.prairielearn.org/"
                 >
-                  LinkedIn
-                </StyledLink>{' '}
-                and{' '}
-                <StyledLink
-                  color={colors.PRIMARY}
-                  href="https://github.com/renzol2"
-                >
-                  GitHub
-                </StyledLink>{' '}
-                right now. Or, check out{' '}
-                <StyledLink color={colors.PRIMARY} href="/is390">
-                  this article I wrote on Asian representation in superhero
-                  comics.
+                  undergraduate researcher @ prairielearn
                 </StyledLink>
-              </Paragraph>
-            </Box>
-          </ScaleFade>
+              </ListItem>
+            </UnorderedList>
+
+            <Paragraph>
+              most recently, i was working as a full-stack software engineering
+              intern @{' '}
+              <StyledLink
+                color={colors.CARGILL_GREEN}
+                href="https://researchpark.illinois.edu/tenant_directory/cargill-innovation-lab/"
+              >
+                cargill
+              </StyledLink>
+            </Paragraph>
+            <Paragraph>
+              this website is a WIP. check out my{' '}
+              <StyledLink
+                color={colors.PRIMARY}
+                href="https://www.linkedin.com/in/renzo-marc-ledesma/"
+              >
+                linkedin
+              </StyledLink>{' '}
+              and{' '}
+              <StyledLink
+                color={colors.PRIMARY}
+                href="https://github.com/renzol2"
+              >
+                github
+              </StyledLink>{' '}
+              instead.
+            </Paragraph>
+          </Box>
         </Box>
       </Center>
     </Box>
