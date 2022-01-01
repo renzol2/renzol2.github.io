@@ -29,57 +29,16 @@ const Home = () => {
           </Header>
           <Box w={{ base: '100%', [BREAKPOINT]: '85%' }} mt="2rem">
             <Paragraph>i write code and music :)</Paragraph>
-            <Paragraph>currently i am a</Paragraph>
-            <UnorderedList mb="2rem">
-              <ListItem>
-                <StyledLink
-                  color={colors.URBANA_ORANGE}
-                  href="https://music.illinois.edu/area/cs-music"
-                >
-                  cs + music student @ uiuc
-                </StyledLink>
-              </ListItem>
-              <ListItem>
-                <StyledLink color="darkblue" href="http://psauiuc.org/">
-                  filipino culture night co-coordinator @ psa uiuc
-                </StyledLink>
-              </ListItem>
-              <ListItem>
-                <StyledLink
-                  color={colors.PRAIRIELEARN_BLUE}
-                  href="https://www.prairielearn.org/"
-                >
-                  undergraduate researcher @ prairielearn
-                </StyledLink>
-              </ListItem>
-            </UnorderedList>
-
             <Paragraph>
-              most recently, i was working as a full-stack software engineering
-              intern @{' '}
+              this website is currently a placeholder. you can view my work on
+              my{' '}
               <StyledLink
-                color={colors.CARGILL_GREEN}
-                href="https://researchpark.illinois.edu/tenant_directory/cargill-innovation-lab/"
+                href="https://www.renzomledesma.me/"
+                color={colors.PRIMARY}
               >
-                cargill
+                portfolio site
               </StyledLink>
-            </Paragraph>
-            <Paragraph>
-              this website is a WIP. check out my{' '}
-              <StyledLink
-                color={colors.PRIMARY}
-                href="https://www.linkedin.com/in/renzo-marc-ledesma/"
-              >
-                linkedin
-              </StyledLink>{' '}
-              and{' '}
-              <StyledLink
-                color={colors.PRIMARY}
-                href="https://github.com/renzol2"
-              >
-                github
-              </StyledLink>{' '}
-              instead.
+              . thanks and have a great day! 😌
             </Paragraph>
           </Box>
         </Box>
